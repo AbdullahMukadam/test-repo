@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah - Portfolio Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Merriweather:wght@300;400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        masthead: ['UnifrakturMaguntia', 'cursive'],
+                        headline: ['Playfair Display', 'serif'],
+                        body: ['Merriweather', 'serif'],
+                        mono: ['Courier Prime', 'monospace'],
+                    },
+                    colors: {
+                        paper: '#F4F1EA',
+                        ink: '#1a1a1a',
+                        'ink-light': '#4a4a4a',
+                        accent: '#8b0000', // Deep red for "Breaking News"
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.08%22/%3E%3C/svg%3E')",
+                    },
+                    animation: {
+                        'ticker': 'ticker 20s linear infinite',
+                        'typewriter': 'typewriter 2s steps(40) 1s 1 normal both',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        ticker: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' }
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F4F1EA;
+            color: #1a1a1a;
+        }
+        /* Double border utility for newspaper dividers */
+        .border-double-b {
+            border-bottom: 4px double #1a1a1a;
+        }
+        .border-double-t {
+            border-top: 4px double #1a1a1a;
+        }
+        
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 0.85;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            font-weight: 700;
+        }
+
+        /* Image Halftone Filter Effect */
+        .halftone {
+            filter: grayscale(100%) contrast(120%);
+            transition: all 0.4s ease;
+        }
+        .group:hover .halftone {
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        /* Hide scrollbar for ticker */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-paper min-h-screen relative overflow-x-hidden selection:bg-ink selection:text-paper">
+
+    <div class="fixed inset-0 bg-paper-texture pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <header class="flex flex-col items-center mb-8 border-b-4 border-black pb-2">
+            <div class="w-full flex justify-between text-xs font-mono border-b border-black pb-1 mb-2 uppercase tracking-widest">
+                <span>Vol. 1, Issue 42</span>
+                <span id="date"></span>
+                <span>Price: $0.00 (Open Source)</span>
+            </div>
+
+            <h1 class="font-masthead text-6xl md:text-8xl lg:text-9xl tracking-tight text-center leading-none mb-4 transform scale-y-110">
+                Abdullah
+            </h1>
+
+            <div class="w-full flex justify-center items-center gap-4 border-t-2 border-black border-double pt-1 uppercase font-bold text-xs md:text-sm tracking-widest font-sans">
+                <span class="flex-1 text-right">Pixel Perfect</span>
+                <div class="w-2 h-2 bg-black rounded-full"></div>
+                <span class="flex-1 text-center">Code with Character</span>
+                <div class="w-2 h-2 bg-black rounded-full"></div>
+                <span class="flex-1 text-left">Shipping Daily</span>
+            </div>
+        </header>
+
+        <div class="w-full border-y-2 border-black mb-8 overflow-hidden relative h-10 flex items-center bg-ink text-paper">
+            <div class="absolute whitespace-nowrap animate-ticker font-mono text-sm tracking-wider">
+                BREAKING NEWS: REACT 19 RELEASED +++ TAILWIND CSS SAVES TIME +++ LOCAL DEVELOPER SHIPS PRODUCTION APP +++ COFFEE STOCKS RUNNING LOW +++ TYPESCRIPT IS MANDATORY +++ HIRE ME IMMEDIATELY +++
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b-2 border-black pb-12 mb-12">
+            
+            <div class="lg:col-span-8 pr-0 lg:pr-8 lg:border-r border-black/20">
+                
+                <article class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center gap-2 mb-2 font-mono text-xs text-accent font-bold uppercase tracking-widest">
+                        <span class="animate-pulse">â Live Report</span>
+                        <span>Frontend Engineering</span>
+                    </div>
+                    
+                    <h2 class="font-headline text-5xl md:text-7xl font-bold leading-[0.9] mb-6 text-ink hover:underline decoration-4 underline-offset-4 cursor-pointer">
+                        ENGINEER REDEFINES<br>
+                        <span class="italic font-light">DIGITAL EXPERIENCES</span>
+                    </h2>
+
+                    <div class="group relative w-full h-[400px] bg-gray-200 mb-6 overflow-hidden border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Developer at work" class="w-full h-full object-cover halftone">
+                        <div class="absolute bottom-0 left-0 bg-paper border-t-2 border-r-2 border-black px-4 py-2 font-mono text-xs">
+                            FIG A. The setup in question.
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="font-body text-justify leading-relaxed drop-cap text-lg">
+                            <span class="font-bold uppercase">San Francisco â </span> The tech world was abuzz this morning as a new portfolio dropped, featuring a stunning blend of classical aesthetics and modern performance. Critics are calling it "a breath of fresh air" in a sea of sterile minimalist designs. The developer behind this project claims to bridge the gap between design and engineering.
+                        </div>
+                        <div class="font-body text-justify leading-relaxed text-lg flex flex-col justify-between">
+                            <p class="mb-4">"I simply focus on clean code and user experience," the developer stated in an exclusive interview. Specializing in React, Next.js, and creative CSS, they are currently open to new opportunities.</p>
+                            
+                            <a href="#contact" class="inline-block w-full text-center py-3 border-2 border-black font-mono font-bold uppercase hover:bg-black hover:text-white transition-colors">
+                                Read Full Bio â
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-t-2 border-black mb-8 w-1/3 mx-auto">
+
+                <h3 class="font-headline text-3xl font-bold mb-6 italic border-b-2 border-black inline-block pr-12">Selected Works</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="border-2 border-black mb-3 overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover halftone group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-headline text-2xl font-bold leading-tight mb-2 group-hover:underline">E-Commerce Dashboard</h4>
+                        <p class="font-body text-sm text-gray-600 line-clamp-3 mb-2">A comprehensive analytics tool built with Next.js and Tremor. Features real-time data visualization and inventory tracking.</p>
+                        <span class="font-mono text-xs uppercase border border-black px-1">React</span>
+                        <span class="font-mono text-xs uppercase border border-black px-1">Tailwind</span>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="border-2 border-black mb-3 overflow-hidden h-48">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover halftone group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-headline text-2xl font-bold leading-tight mb-2 group-hover:underline">Social Graph API</h4>
+                        <p class="font-body text-sm text-gray-600 line-clamp-3 mb-2">High-performance backend service for mapping user relationships. Built with Node.js and Neo4j for scale.</p>
+                        <span class="font-mono text-xs uppercase border border-black px-1">Node</span>
+                        <span class="font-mono text-xs uppercase border border-black px-1">GraphQL</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="lg:col-span-4 pl-0 lg:pl-4 flex flex-col gap-8">
+                
+                <div class="border-2 border-black p-4 text-center">
+                    <h5 class="font-sans font-bold uppercase tracking-widest text-xs mb-2 border-b border-black pb-1">Current Conditions</h5>
+                    <div class="flex justify-center items-center gap-4 py-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <div class="font-headline text-3xl font-bold">24Â°C</div>
+                    </div>
+                    <p class="font-mono text-xs">Clear skies, high probability of shipping code.</p>
+                </div>
+
+                <div class="bg-ink text-paper p-6 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-paper text-ink px-2 font-mono text-xs border border-black font-bold uppercase">
+                        From the Desk
+                    </div>
+                    <p class="font-body italic text-sm leading-relaxed text-center mb-4">
+                        "In a world of frameworks, be the vanilla JS. Strong, reliable, and foundational."
+                    </p>
+                    <div class="w-12 h-0.5 bg-paper/30 mx-auto mb-4"></div>
+                    <p class="text-xs font-mono text-center opacity-80">
+                        The Editor-in-Chief
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-headline font-bold text-xl border-b-2 border-black mb-4">The Toolkit</h5>
+                    <ul class="font-mono text-sm space-y-2">
+                        <li class="flex justify-between border-b border-gray-400 border-dotted pb-1">
+                            <span>Javascript (ES6+)</span>
+                            <span class="font-bold">Expert</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-400 border-dotted pb-1">
+                            <span>React / Next.js</span>
+                            <span class="font-bold">Adv.</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-400 border-dotted pb-1">
+                            <span>Tailwind CSS</span>
+                            <span class="font-bold">Pro</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-400 border-dotted pb-1">
+                            <span>Node.js</span>
+                            <span class="font-bold">Int.</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-400 border-dotted pb-1">
+                            <span>PostgreSQL</span>
+                            <span class="font-bold">Int.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-4 border-double border-black p-4 text-center mt-auto hover:bg-black hover:text-white transition-colors cursor-pointer group" id="contact">
+                    <p class="font-sans font-bold text-xs uppercase mb-2">Advertisement</p>
+                    <h4 class="font-headline text-3xl font-bold mb-2 leading-none">NEED A WEB WIZARD?</h4>
+                    <p class="font-body text-sm mb-4">Available for freelance commissions and full-time roles.</p>
+                    <p class="font-mono text-xs underline decoration-dotted group-hover:text-gray-300">Call Now: 555-0199</p>
+                </div>
+
+            </aside>
+        </div>
+
+        <footer class="mb-12">
+            <h3 class="font-masthead text-4xl text-center mb-6">Classifieds & Contacts</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 border-t-2 border-black pt-4">
+                <div class="border border-black p-3 min-h-[100px] flex flex-col justify-between hover:bg-black hover:text-paper transition-colors cursor-pointer">
+                    <span class="font-mono text-xs font-bold uppercase">Github</span>
+                    <span class="font-headline text-lg italic">@username</span>
+                </div>
+                <div class="border border-black p-3 min-h-[100px] flex flex-col justify-between hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+                    <span class="font-mono text-xs font-bold uppercase">Twitter / X</span>
+                    <span class="font-headline text-lg italic">@handle</span>
+                </div>
+                <div class="border border-black p-3 min-h-[100px] flex flex-col justify-between hover:bg-blue-800 hover:text-white transition-colors cursor-pointer">
+                    <span class="font-mono text-xs font-bold uppercase">LinkedIn</span>
+                    <span class="font-headline text-lg italic">/in/profile</span>
+                </div>
+                <div class="border border-black p-3 min-h-[100px] flex flex-col justify-between hover:bg-accent hover:text-white transition-colors cursor-pointer">
+                    <span class="font-mono text-xs font-bold uppercase">Email</span>
+                    <span class="font-headline text-lg italic">hello@mail.com</span>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center font-mono text-xs uppercase tracking-widest text-gray-500">
+                &copy; 2026 Abdullah. Printed in HTML & Tailwind.
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Set dynamic date
+        const dateElement = document.getElementById('date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = new Date().toLocaleDateString('en-US', options).toUpperCase();
+    </script>
+</body>
+</html>
