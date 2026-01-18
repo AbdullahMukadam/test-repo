@@ -1,0 +1,200 @@
+{
+  "id": "newspaper-portfolio-1",
+  "name": "The Dev Chronicles - Newspaper Portfolio",
+  "description": "Creative developer portfolio styled like a vintage newspaper with serif fonts and elegant typography",
+  "category": "portfolio",
+  "type": "html",
+  "formConfig": {
+    "steps": [
+      {
+        "id": 1,
+        "title": "Basic Information",
+        "fields": [
+          {
+            "name": "newspaperName",
+            "label": "Newspaper Name",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., The Dev Chronicles",
+            "default": "The Dev Chronicles"
+          },
+          {
+            "name": "subtitle",
+            "label": "Subtitle",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., Portfolio Edition",
+            "default": "Portfolio Edition"
+          },
+          {
+            "name": "motto1",
+            "label": "Motto 1",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., Pixel Perfect",
+            "default": "Pixel Perfect"
+          },
+          {
+            "name": "motto2",
+            "label": "Motto 2",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., Code with Character",
+            "default": "Code with Character"
+          },
+          {
+            "name": "motto3",
+            "label": "Motto 3",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., Shipping Daily",
+            "default": "Shipping Daily"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Hero Article",
+        "fields": [
+          {
+            "name": "headlineMain",
+            "label": "Headline (Main)",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., ENGINEER REDEFINES",
+            "default": "ENGINEER REDEFINES"
+          },
+          {
+            "name": "headlineItalic",
+            "label": "Headline (Italic Part)",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., DIGITAL EXPERIENCES",
+            "default": "DIGITAL EXPERIENCES"
+          },
+          {
+            "name": "location",
+            "label": "Location",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., San Francisco",
+            "default": "San Francisco"
+          },
+          {
+            "name": "introText",
+            "label": "Introduction Paragraph",
+            "type": "textarea",
+            "rows": 3,
+            "required": true,
+            "placeholder": "Write your introduction story here",
+            "default": "The tech world was abuzz this morning as a new portfolio dropped, featuring a stunning blend of classical aesthetics and modern performance. Critics are calling it \"a breath of fresh air\" in a sea of sterile minimalist designs. The developer behind this project claims to bridge the gap between design and engineering."
+          },
+          {
+            "name": "quote",
+            "label": "Personal Quote",
+            "type": "textarea",
+            "rows": 3,
+            "required": true,
+            "placeholder": "A quote about your work philosophy",
+            "default": "\"I simply focus on clean code and user experience,\" the developer stated in an exclusive interview. Specializing in React, Next.js, and creative CSS, they are currently open to new opportunities."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Projects",
+        "fields": [
+          {
+            "name": "project1Title",
+            "label": "Project 1 - Title",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., E-Commerce Dashboard",
+            "default": "E-Commerce Dashboard"
+          },
+          {
+            "name": "project1Description",
+            "label": "Project 1 - Description",
+            "type": "textarea",
+            "rows": 2,
+            "required": true,
+            "placeholder": "Describe this project",
+            "default": "A comprehensive analytics tool built with Next.js and Tremor. Features real-time data visualization and inventory tracking."
+          },
+          {
+            "name": "project2Title",
+            "label": "Project 2 - Title",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., Social Graph API",
+            "default": "Social Graph API"
+          },
+          {
+            "name": "project2Description",
+            "label": "Project 2 - Description",
+            "type": "textarea",
+            "rows": 2,
+            "required": true,
+            "placeholder": "Describe this project",
+            "default": "High-performance backend service for mapping user relationships. Built with Node.js and Neo4j for scale."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Contact & Philosophy",
+        "fields": [
+          {
+            "name": "philosophyQuote",
+            "label": "Philosophy Quote",
+            "type": "textarea",
+            "rows": 2,
+            "required": false,
+            "placeholder": "Your coding philosophy",
+            "default": "In a world of frameworks, be the vanilla JS. Strong, reliable, and foundational."
+          },
+          {
+            "name": "phoneNumber",
+            "label": "Phone Number",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., 555-0199",
+            "default": "555-0199"
+          },
+          {
+            "name": "githubHandle",
+            "label": "GitHub Handle",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g., @username",
+            "default": "@username"
+          },
+          {
+            "name": "twitterHandle",
+            "label": "Twitter/X Handle",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., @handle",
+            "default": "@handle"
+          },
+          {
+            "name": "linkedinHandle",
+            "label": "LinkedIn Handle",
+            "type": "text",
+            "required": false,
+            "placeholder": "e.g., /in/profile",
+            "default": "/in/profile"
+          },
+          {
+            "name": "email",
+            "label": "Email Address",
+            "type": "email",
+            "required": true,
+            "placeholder": "e.g., hello@mail.com",
+            "default": "hello@mail.com"
+          }
+        ]
+      }
+    ]
+  }
+}
